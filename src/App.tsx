@@ -3,10 +3,16 @@ import './App.css'
 
 function App() {
   const[name , setName] = useState("")
+  const[count ,setCount] =useState(0)
+  const handleClick  =()=>{
+    setCount(count+1)
+  }
 
   return (
     <>
-      <h2>Welcome {name ? `,${name}` : "No name"} !</h2>
+
+    <button type='button' onClick={handleClick}>count is: {}{count}</button>
+      <h2>Welcome {name ? `,${name}` :"No name"} !</h2>
 
 
       <input type='text'
